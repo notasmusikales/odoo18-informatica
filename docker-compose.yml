@@ -9,6 +9,8 @@ services:
     volumes:
       - odoo18-db-informatica-data:/var/lib/postgresql/data
     restart: unless-stopped
+    ports:
+      - "5432:5432"
 
   odoo:
     image: odoo:18.0
